@@ -2,15 +2,16 @@
 // The choice of a variable name should be mnemonic that is -
 // designed to indicate to the casual observer the intent of its use.
 
-// The first integer variable stores the first number
-int firstNumber = 5;
+// The integer variable stores the first number
+// Ask the user to input the first number
+Console.WriteLine("Type in the first number followed by the Enter key");
+int firstNumber = Convert.ToInt32(Console.ReadLine());
 
-// The second integer variable stores the second number
-int secondNumber = 20;
+// Ask the user to input the second number
+Console.WriteLine("Type in the second number followed by the Enter key");
+int secondNumber = Convert.ToInt32(Console.ReadLine());
 
-// The "result" variable contains the addition
-// of firstNumber and secondNumber
-// Note that the integer type is used for "result" variable
+// Perform the calculation
 int result = firstNumber + secondNumber;
-Console.WriteLine("The addition of both numbers is {0}", result);
+Console.WriteLine("Adding {0} and {1} gave the answer {2}", firstNumber, secondNumber, result);
 Console.ReadKey();
