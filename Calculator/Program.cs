@@ -42,14 +42,19 @@ void CalculatorApp()
         // Display the result to the user
         Console.WriteLine($"Result: {result}.");
     }
-    catch (Exception ex)
+    catch (FormatException ex)
     {
         // Handle the case where the input is not valid
-        // and show the user the error message content
-        Console.WriteLine($"Error:{ex.Message}. Please enter a valid operation.");
+        Console.WriteLine("Please enter a valid number.");
+    }
+    catch (DivideByZeroException ex)
+    {
+        // Handle the divide by zero error
+        Console.WriteLine("You cannot divide by 0.");
     }
     finally
     {
-
+        // This block runs no matter what
+        Console.WriteLine("Operation completed.");
     }
 }
